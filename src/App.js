@@ -1,12 +1,10 @@
-function App() {
+import Home from './components/Home/Home'
+
+const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>
-                    Początek
-                </p>
-            </header>
-        </div>
+        <>
+            <Home/>
+        </>
     );
 }
 
