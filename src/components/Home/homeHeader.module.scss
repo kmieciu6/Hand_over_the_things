@@ -2,7 +2,6 @@
 
 .homeHeader {
   display: flex;
-  border: 1px solid red;
   max-width: 90%;
   justify-content: space-between;
 
@@ -10,6 +9,38 @@
     width: 50%;
     height: 80vh;
     background: url("../../assets/Home-Hero-Image.jpg") right/cover;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    margin-top: 2rem;
+
+    &__login {
+      margin-bottom: 1.5rem;
+    }
+
+    .log {
+      color: $grey-color;
+      cursor: pointer;
+      padding: .5rem;
+      margin: 1rem;
+      border: 1px solid white;
+      font-size: 1rem;
+
+      &:hover {
+        border: 1px solid $yellow-color;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $black-color;
+      margin: 1rem;
+      font-size: 1.13rem;
+    }
   }
 
   .title {

@@ -4,7 +4,7 @@ import Decoration from '../../assets/Decoration.svg'
 
 const HomeHeader = () => {
     let Link = Scroll.Link;
-    const {homeHeader, photo, opening, nav, nav__login, log, sing, links, title, buttons} = styles;
+    const {homeHeader, photo, opening, nav, nav__login, log, links, title, buttons} = styles;
 
     return (
         <section className={homeHeader} id="home">
@@ -17,7 +17,7 @@ const HomeHeader = () => {
                               duration={500}>
                             Zaloguj
                         </Link>
-                        <Link className={sing} activeClass="active" to="test1" spy={true} smooth={true} offset={50}
+                        <Link className={log} activeClass="active" to="test1" spy={true} smooth={true} offset={50}
                               duration={500}>
                             Załóż konto
                         </Link>
