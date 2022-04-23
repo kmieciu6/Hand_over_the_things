@@ -18,7 +18,7 @@ const Header = () => {
                         <Link to={"/login"}>
                             Zaloguj
                         </Link>
-                        <Link to={"/singup"}>
+                        <Link to={"/signup"}>
                             Załóż konto
                         </Link>
                     </div>
