@@ -26,7 +26,7 @@ const Header = () => {
                         <Scroll to={"home"} smooth duration={500}>Start</Scroll>
                         <Scroll to={"simple_steps"} smooth duration={500}>O co chodzi?</Scroll>
                         <Scroll to={"about"} smooth duration={500}>O nas</Scroll>
-                        <Scroll to={"home"} smooth duration={500}>Fundacja i organizacje</Scroll>
+                        <Scroll to={"helps"} smooth duration={500}>Fundacja i organizacje</Scroll>
                         <Scroll to={"home"} smooth duration={500}>Kontakt</Scroll>
                     </ul>
                 </div>
