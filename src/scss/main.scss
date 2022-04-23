@@ -2,6 +2,15 @@
 @import "settings/colors";
 @import "settings/fonts";
 
-body, button {
+body {
   font-family: $font-base;
+  color: $black-color;
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  img {
+    margin: 2rem 0;
+  }
 }

@@ -1,11 +1,15 @@
-import HomeHeader from './HomeHeader';
-import HomeThreeColumns from './HomeThreeColumns';
+import Header from './Header';
+import ThreeColumns from './ThreeColumns';
+import SimpleSteps from './SimpleSteps'
+import AboutUs from "./AboutUs";
 
 const Home = () => {
     return (
         <>
-            <HomeHeader/>
-            <HomeThreeColumns/>
+            <Header/>
+            <ThreeColumns/>
+            <SimpleSteps/>
+            <AboutUs/>
         </>
     );
 }

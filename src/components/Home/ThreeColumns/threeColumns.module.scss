@@ -1,0 +1,35 @@
+@import "../../../scss/settings/fonts";
+@import "../../../scss/settings/colors";
+
+.three_columns {
+  display: flex;
+  background: url("../../../assets/3 Columns Background.png") center/cover;
+  min-height: 40vh;
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 3rem;
+    color: $black-color;
+  }
+
+  span {
+    color: $brown-color;
+    border: 1px solid black;
+    width: 2rem;
+    min-height: 15vh;
+  }
+
+  h2 {
+    font-size: 1.13rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+
+  p {
+    font-family: $font-alt;
+    line-height: 2rem;
+  }
+}
