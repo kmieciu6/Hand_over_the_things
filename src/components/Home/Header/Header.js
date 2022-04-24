@@ -15,10 +15,10 @@ const Header = () => {
             <div className={opening}>
                 <div className={nav}>
                     <div className={nav__login}>
-                        <Link to={"/login"} className={log}>
+                        <Link to={"/Login"} className={log}>
                             Zaloguj
                         </Link>
-                        <Link to={"/signup"} className={log}>
+                        <Link to={"/SignUp"} className={log}>
                             Załóż konto
                         </Link>
                     </div>
