@@ -3,6 +3,7 @@ import ThreeColumns from './ThreeColumns';
 import SimpleSteps from './SimpleSteps'
 import AboutUs from "./AboutUs";
 import Helps from "./Helps";
+import Contact from "./Contact";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <SimpleSteps/>
             <AboutUs/>
             <Helps/>
+            <Contact/>
         </>
     );
 }

@@ -1,6 +1,7 @@
 @import "settings/reset";
 @import "settings/colors";
 @import "settings/fonts";
+@import "settings/mixins";
 
 body {
   font-family: $font-base;
@@ -8,6 +9,7 @@ body {
 
   h1 {
     font-size: 2.4rem;
+    text-align: center;
   }
 
   img {

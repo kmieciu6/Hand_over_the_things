@@ -1,7 +1,12 @@
-@import "../../../scss/settings/colors";
+@import "../../../scss/main";
 
 .about_us {
   display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
 
   .container {
     background-color: $white-color;
@@ -14,13 +19,22 @@
 
   .signature {
     display: flex;
-    align-self: flex-end;
-    width: 35%;
-    margin-bottom: 8rem;
+    width: 50%;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+
+    @include desktop {
+      margin-bottom: 8rem;
+      align-self: flex-end;
+    }
   }
 
   h1 {
-    margin-top: 8rem;
+    margin-top: 3rem;
+
+    @include desktop {
+      margin-top: 8rem;
+    }
   }
 
   p {
@@ -32,6 +46,10 @@
   .img {
     background: url("../../../assets/People.jpg") center/cover;
     width: 100%;
-    height: auto;
+    height: 50vh;
+
+    @include desktop {
+      height: auto;
+    }
   }
 }

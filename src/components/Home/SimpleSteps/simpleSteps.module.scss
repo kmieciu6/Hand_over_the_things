@@ -1,4 +1,4 @@
-@import "../../../scss/settings/colors";
+@import "../../../scss/main";
 
 .simple_steps {
   display: flex;
@@ -17,9 +17,14 @@
 
   .boxes {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 3rem;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   .box {
@@ -28,12 +33,30 @@
     text-align: center;
     align-items: center;
 
+    @include mobile {
+      margin: 1rem 0;
+    }
+
     &:first-of-type {
       margin-left: 4rem;
+
+      @include mobile {
+        margin: 0;
+      }
     }
 
     &:last-of-type {
       margin-right: 4rem;
+
+      @include mobile {
+        margin: 0;
+      }
+    }
+
+    img {
+      @include mobile {
+        margin: 1.5em 0;
+      }
     }
   }
 
@@ -45,6 +68,10 @@
     border-bottom: 1px solid $grey-color;
     width: 5rem;
     margin: 1.5rem 0;
+
+    @include mobile {
+      margin: 1rem 0;
+    }
   }
 
   p {

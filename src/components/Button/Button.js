@@ -8,6 +8,11 @@ const Button = styled.button`
   width: 14rem;
   background-color: white;
   border: 1px solid #737373;
+  transition: 0.8s;
+  
+  &:hover {
+   background: #F0F1F1; 
+  }
 `
 
 export default Button

@@ -1,10 +1,14 @@
-@import "../../../scss/settings/fonts";
-@import "../../../scss/settings/colors";
+@import "../../../scss/main";
 
 .three_columns {
   display: flex;
+  flex-direction: column;
   background: url("../../../assets/3 Columns Background.png") center/cover;
   min-height: 40vh;
+
+  @include desktop {
+    flex-direction: row;
+  }
 
   .box {
     display: flex;
