@@ -9,13 +9,13 @@ const LogOut = () => {
     const {log_out, nav, x_mark, form} = styles;
     return (
         <section className={log_out}>
-            <Link to={"/Home"} className={nav}>
+            <Link to={"/"} className={nav}>
                 <FontAwesomeIcon icon={faXmark} className={x_mark}/>
             </Link>
             <div className={form}>
                 <h1>Załóż konto</h1>
                 <img src={Decoration} alt="Decoration"/>
-                <Link to={"/Home"}><Button>Strona główna</Button></Link>
+                <Link to={"/"}><Button>Strona główna</Button></Link>
             </div>
         </section>
     )

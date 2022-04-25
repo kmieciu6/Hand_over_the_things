@@ -9,7 +9,7 @@ const SignUp = () => {
     const {sign_up, nav, form, x_mark, buttons} = styles;
     return (
         <section className={sign_up}>
-            <Link to={"/Home"} className={nav}>
+            <Link to={"/"} className={nav}>
                 <FontAwesomeIcon icon={faXmark} className={x_mark}/>
             </Link>
             <div className={form}>
@@ -17,13 +17,11 @@ const SignUp = () => {
                 <img src={Decoration} alt="Decoration"/>
                 <form>
                     <label>
-                        <h3>Imię</h3>
-                        <input type="name" name="name" placeholder="Jan"/>
-                        <h3>Email</h3>
-                        <input type="email" name="email" placeholder="jan.kowalski@gmail.com"/>
-                        <h3>Hasło</h3>
+                        <h4>Email</h4>
+                        <input type="email" name="email" placeholder="jan.kowalski@xyz.com"/>
+                        <h4>Hasło</h4>
                         <input type="password" name="password"/>
-                        <h3>Powtórz hasło</h3>
+                        <h4>Powtórz hasło</h4>
                         <input type="password" name="password"/>
                     </label>
                 </form>

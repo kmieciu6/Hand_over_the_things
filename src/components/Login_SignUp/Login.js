@@ -9,7 +9,7 @@ const Login = () => {
     const {login, nav, form, x_mark, buttons} = styles;
     return (
         <section className={login}>
-            <Link to={"/Home"} className={nav}>
+            <Link to={"/"} className={nav}>
                 <FontAwesomeIcon icon={faXmark} className={x_mark}/>
             </Link>
             <div className={form}>
@@ -17,15 +17,15 @@ const Login = () => {
                 <img src={Decoration} alt="Decoration"/>
                 <form>
                     <label>
-                        <h3>Email</h3>
-                        <input type="email" name="email" placeholder="jan.kowalski@gmail.com"/>
-                        <h3>Hasło</h3>
+                        <h4>Email</h4>
+                        <input type="email" name="email" placeholder="jan.kowalski@xyz.com"/>
+                        <h4>Hasło</h4>
                         <input type="password" name="password"/>
                     </label>
                 </form>
                 <div className={buttons}>
                     <Link to={"/SignUp"}><Button>Załóż konto</Button></Link>
-                    <Link to={"/Home"}><Button>Zaloguj się</Button></Link>
+                    <Link to={"/"}><Button>Zaloguj się</Button></Link>
                 </div>
             </div>
         </section>
