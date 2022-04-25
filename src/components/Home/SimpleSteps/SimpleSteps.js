@@ -1,4 +1,5 @@
 import styles from './simpleSteps.module.scss';
+import {Link} from "react-router-dom";
 import Decoration from "../../../assets/Decoration.svg";
 import icon1 from "../../../assets/Icon-1.svg";
 import icon2 from "../../../assets/Icon-2.svg";
@@ -41,7 +42,7 @@ const SimpleSteps = () => {
                     </div>
                 </div>
             </div>
-            <Button className={btn}>oddaj rzeczy</Button>
+            <Link to={"/Login"}><Button className={btn}>oddaj rzeczy</Button></Link>
         </section>
     )
 }

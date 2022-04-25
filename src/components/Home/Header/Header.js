@@ -35,8 +35,8 @@ const Header = () => {
                     <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
                     <img src={Decoration} alt="Decoration"/>
                     <div className={buttons}>
-                        <Button>oddaj rzeczy</Button>
-                        <Button>zorganizuj zbiórkę</Button>
+                        <Link to={"/Login"}><Button>oddaj rzeczy</Button></Link>
+                        <Link to={"/Login"}><Button>zorganizuj zbiórkę</Button></Link>
                     </div>
                 </div>
             </div>

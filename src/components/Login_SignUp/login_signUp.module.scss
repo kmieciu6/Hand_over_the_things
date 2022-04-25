@@ -13,6 +13,10 @@
       transition: 1s;
       margin: 4rem 5rem;
 
+      @include mobile {
+        margin: 3rem 2rem;
+      }
+
       &:hover {
         margin: 3rem 4rem;
         width: 80px;
@@ -28,8 +32,12 @@
 
     form {
       background: $white-color;
-      padding: 5rem;
       color: $black-color;
+      padding: 5rem;
+
+      @include mobile {
+        padding: 3rem;
+      }
 
       h3 {
         margin-top: 1rem;
@@ -47,9 +55,14 @@
 
     .buttons {
       display: flex;
-      justify-content: space-between;
-      width: 40%;
+      justify-content: space-around;
       margin-top: 2rem;
+      width: 100%;
+
+
+      @include desktop {
+        width: 40%;
+      }
 
       Button {
         padding: 0.5rem;
