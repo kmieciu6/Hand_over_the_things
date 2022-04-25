@@ -23,22 +23,6 @@ const validate = form => {
         return "Wiadomość musi mieć conajmniej 120 znaków"
     }
 
-    if (!form.password) {
-        return "Hasło jest wymagane"
-    } else if (form.password.length < 5) {
-        return "Hasło jest za krótkie"
-    }
-
-    if (!form.passwordRep) {
-        return "Powtórz hasło"
-    } else if (form.passwordRep.length < 5) {
-        return "Hasło jest za krótkie"
-    }
-
-    if (form.passwordRep !== form.password) {
-        return "Hasła nie są identyczne"
-    }
-
     return "Wiadomość została wysłana! Wkrótce się skontaktujemy."
 }
 
@@ -49,9 +33,7 @@ const Contact = () => {
     const [form, setForm] = React.useState({
         name: '',
         email: '',
-        text: '',
-        password: '',
-        passwordRep: ''
+        text: ''
     });
 
     const updateField = e => {
@@ -78,8 +60,8 @@ const Contact = () => {
     useEffect(() => {
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: 'React Hooks POST Request Example' })
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({title: 'React Hooks POST Request Example'})
         };
         fetch('https://reqres.in/api/posts', requestOptions)
             .then(response => response.json())

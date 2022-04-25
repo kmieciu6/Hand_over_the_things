@@ -25,12 +25,12 @@
     }
   }
 
-  .form {
+  .nav_form {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    form {
+    .form_label {
       background: $white-color;
       color: $black-color;
       padding: 5rem;
@@ -42,12 +42,14 @@
 
     .buttons {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       margin-top: 2rem;
-      width: 100%;
+      margin-bottom: 3rem;
 
-      @include desktop {
-        width: 40%;
+      .button {
+        margin: 0;
+        font-size: 1rem;
+        text-transform: revert;
       }
 
       Button {

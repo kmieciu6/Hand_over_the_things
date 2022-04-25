@@ -90,22 +90,9 @@
   }
 
   .button {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    font-size: 1.2rem;
-    width: 6rem;
-    border: 1px solid $grey-color;
-    padding: 0.5rem;
-
-    &:hover {
-      background: #F0F1F1;
-    }
-
-    @include desktop {
-    }
+    margin-top: 2rem;
+    margin-right: 0;
   }
-
 }
 
 .footer {
