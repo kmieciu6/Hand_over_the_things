@@ -108,7 +108,7 @@
       align-items: center;
       margin: 1rem 0;
       h1 {
-      font-size: 2.2rem;
+        font-size: 2.2rem;
       }
     }
 
@@ -154,7 +154,25 @@
       padding-bottom: 2rem;
 
       @include mobile {
-        padding-bottom: 8px;
+
+        &:hover {
+          padding-bottom: 0.5rem;
+        }
+
+        &:active {
+          padding-bottom: 2rem;
+        }
+      }
+
+      @include tablet {
+
+        &:hover {
+          padding-bottom: 0.5rem;
+        }
+
+        &:active {
+          padding-bottom: 2rem;
+        }
       }
     }
   }
