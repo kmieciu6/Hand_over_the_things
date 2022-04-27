@@ -9,7 +9,7 @@
   .img {
 
     @include desktop {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.7);
       width: 60%;
       height: auto;
     }
@@ -24,7 +24,7 @@
     padding-top: 3rem;
 
     @include desktop {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.7);
       width: 60%;
       padding-top: 8rem;
     }
@@ -37,6 +37,24 @@
   }
 
   form {
+
+    .suc {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 1rem 0;
+
+      h2 {
+        color: green;
+        font-size: 1.2rem;
+        width: 50%;
+        line-height: 2rem;
+
+        @include mobile {
+          width: 80%;
+        }
+      }
+    }
 
     @include mobile {
       width: 60%;
@@ -78,7 +96,8 @@
     }
   }
 
-  .submit {
+  .button {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,11 +106,17 @@
       align-items: flex-end;
       justify-content: flex-end;
     }
-  }
 
-  .button {
-    margin-top: 2rem;
-    margin-right: 0;
+    Button {
+      width: 30%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-transform: revert;
+
+      @include mobile {
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -100,6 +125,10 @@
   margin: -6rem 0 0 0;
   flex-direction: column-reverse;
   align-items: center;
+
+  @include mobile {
+    margin: -1rem 0 0 0;
+  }
 
   @include desktop {
     margin: -4rem 0 0 30rem;

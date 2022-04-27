@@ -141,12 +141,12 @@
     height: 40px;
     z-index: 2;
     position: fixed;
-    right: 4rem;
+    left: 4rem;
     bottom: 4rem;
     transition: 0.3s;
 
     @include mobile {
-      right: 2rem;
+      left: 2rem;
       bottom: 6rem;
     }
 

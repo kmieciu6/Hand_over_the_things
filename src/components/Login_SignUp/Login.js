@@ -24,32 +24,7 @@ const validate = form => {
 
 
 const Login = () => {
-    const {login, nav, nav_form, x_mark, form_label, buttons, button} = styles;
-
-    const [error, setError] = React.useState(null);
-    const [form, setForm] = React.useState({
-        name: '',
-        email: '',
-        password: ''
-    });
-
-    const updateField = e => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handlSubmit = async (e) => {
-        e.preventDefault()
-        const errorMsg = validate(form)
-        if (errorMsg) {
-            setError(errorMsg)
-            console.log('błąd')
-            return ""
-        }
-        console.log('form submitted', form)
-    }
+    const {login, nav, nav_form, x_mark, form_label, buttons} = styles;
 
     return (
         <section className={login}>
@@ -59,18 +34,18 @@ const Login = () => {
             <div className={nav_form}>
                 <h1>Zaloguj się</h1>
                 <img src={Decoration} alt="Decoration"/>
-                <form onSubmit={handlSubmit}>
+                <form>
                     <div className={form_label}>
-                    <label>
-                        <h4>Email</h4>
-                        <input type="email" name="email" placeholder="jan.kowalski@xyz.com" onChange={updateField}/>
-                        <h4>Hasło</h4>
-                        <input type="password" name="password" onChange={updateField}/>
-                    </label>
+                        <label>
+                            <h4>Email</h4>
+                            <input type="email" name="email" placeholder="jan.kowalski@xyz.com"/>
+                            <h4>Hasło</h4>
+                            <input type="password" name="password"/>
+                        </label>
                     </div>
                     <div className={buttons}>
                         <Link to={"/SignUp"}><Button>Załóż konto</Button></Link>
-                        <input type="submit" value="Zaloguj się" className={button}/>
+                        <Button type="submit">Zaloguj się</Button>
                     </div>
                 </form>
             </div>
