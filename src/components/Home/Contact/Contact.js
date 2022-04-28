@@ -7,7 +7,7 @@ import Button from "../../Button";
 
 
 const Contact = () => {
-    const {contact, img, info, infoForm, data, suc, button, textarea, footer} = styles;
+    const {contact, img, info, infoForm, data, suc, button, error, textarea, footer} = styles;
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -86,13 +86,13 @@ const Contact = () => {
                                 <h4>Wpisz swoje imię</h4>
                                 <input type="text" name="name" placeholder="Jan" value={name}
                                        onChange={e => setName(e.target.value)}/>
-                                {errors.name && <p >{errors.name}</p>}
+                                {errors.name && <p className={error}>{errors.name}</p>}
                             </div>
                             <div>
                                 <h4>Wpisz swój email</h4>
                                 <input type="text" name="email" placeholder="jan.kowalski@xyz.com"
                                        value={email} onChange={e => setEmail(e.target.value)}/>
-                                {/*{errors.map(error => <p key={error}>{error}</p>)}*/}
+                                {errors.email && <p className={error}>{errors.email}</p>}
                             </div>
                         </div>
                         <div className={textarea}>
@@ -102,7 +102,7 @@ const Contact = () => {
                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                                    nisi ut aliquip ex ea commodo consequat."/>
-                            {/*{errors.map(error => <p key={error}>{error}</p>)}*/}
+                            {errors.message && <p className={error}>{errors.message}</p>}
                         </div>
                         <div className={button}>
                             <Button type="submit">Wyślij</Button>

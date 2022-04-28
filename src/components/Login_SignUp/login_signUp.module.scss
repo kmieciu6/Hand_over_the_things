@@ -38,6 +38,10 @@
       @include mobile {
         padding: 3rem;
       }
+
+      .error {
+        width: 100%;
+      }
     }
 
     .buttons {

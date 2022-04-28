@@ -5,26 +5,32 @@ import {faXmark} from "@fortawesome/free-solid-svg-icons"
 import Decoration from "../../assets/Decoration.svg";
 import Button from "../Button";
 import React from "react";
-
-const validate = form => {
-    if (!form.email) {
-        return "Podany email jest nieprawidłowy!"
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]\.[A-Z]{2,4}$/i.test(form.email)) {
-        return "Zły email"
-    }
-
-    if (!form.password) {
-        return "Hasło jest wymagane"
-    } else if (form.password.length < 5) {
-        return "Hasło jest za krótkie"
-    }
-
-    return "Logowanie poprawne"
-}
-
+import {useState} from "react";
 
 const Login = () => {
-    const {login, nav, nav_form, x_mark, form_label, buttons} = styles;
+    const {login, nav, nav_form, x_mark, form_label, error, buttons} = styles;
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errors, setErrors] = useState({});
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const _errors = [];
+
+        if (email.length < 3 || email.indexOf("@") === -1) {
+            _errors.email = "Podany email jest nieprawidłowy!";
+        }
+
+        if (password.length < 5) {
+            _errors.password = "Podane hasło jest za krótkie!";
+        }
+
+        setErrors(_errors);
+        if (Object.values(_errors).length > 0) {
+            return false;
+        }
+    };
 
     return (
         <section className={login}>
@@ -34,13 +40,17 @@ const Login = () => {
             <div className={nav_form}>
                 <h1>Zaloguj się</h1>
                 <img src={Decoration} alt="Decoration"/>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={form_label}>
                         <label>
                             <h4>Email</h4>
-                            <input type="email" name="email" placeholder="jan.kowalski@xyz.com"/>
+                            <input type="email" name="email" placeholder="jan.kowalski@xyz.com" value={email}
+                                   onChange={e => setEmail(e.target.value)}/>
+                            {errors.email && <p className={error}>{errors.email}</p>}
                             <h4>Hasło</h4>
-                            <input type="password" name="password"/>
+                            <input type="password" name="password" value={password}
+                                   onChange={e => setPassword(e.target.value)}/>
+                            {errors.password && <p className={error}>{errors.password}</p>}
                         </label>
                     </div>
                     <div className={buttons}>

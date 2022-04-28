@@ -1,8 +1,47 @@
 @import "../../scss/main";
 
 .log_out {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+
+    .x_mark {
+      width: 50px;
+      height: 50px;
+      color: $grey-color;
+      transition: 1s;
+      margin: 4rem 5rem;
+
+      @include mobile {
+        margin: 3rem 2rem;
+      }
+
+      &:hover {
+        margin: 3rem 4rem;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      width: 50%;
+
+      @include mobile {
+        width: 80%;
+      }
+    }
+
+    Button {
+      text-transform: unset;
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+  }
 }

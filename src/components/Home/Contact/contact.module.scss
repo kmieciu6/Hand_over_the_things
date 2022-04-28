@@ -21,12 +21,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 2rem;
 
     @include desktop {
       background-color: rgba(255, 255, 255, 0.7);
       width: 60%;
-      padding-top: 8rem;
+      padding-top: 5rem;
     }
   }
 
@@ -37,12 +37,12 @@
   }
 
   form {
+    z-index: 1;
 
     .suc {
       display: flex;
       width: 100%;
       justify-content: center;
-      margin: 1rem 0;
 
       h2 {
         color: green;
@@ -94,40 +94,42 @@
         background: 0;
       }
     }
-  }
 
-  .button {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .button {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5rem;
 
-    @include desktop {
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
+      @include desktop {
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
 
-    Button {
-      width: 30%;
-      padding: 1rem;
-      font-size: 1.5rem;
-      text-transform: revert;
+      Button {
+        width: 30%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-transform: revert;
 
-      @include mobile {
-        width: 80%;
+        @include mobile {
+          width: 80%;
+        }
       }
     }
   }
 }
 
 .footer {
+  z-index: -1;
   display: flex;
   margin: -6rem 0 0 0;
   flex-direction: column-reverse;
   align-items: center;
 
   @include mobile {
-    margin: -1rem 0 0 0;
+    margin: -5.1rem 0 0 0;
   }
 
   @include desktop {

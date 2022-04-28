@@ -6,14 +6,14 @@ import Decoration from "../../assets/Decoration.svg";
 import Button from "../Button";
 
 const LogOut = () => {
-    const {log_out, nav, x_mark, form} = styles;
+    const {log_out, nav, x_mark, thanks} = styles;
     return (
         <section className={log_out}>
             <Link to={"/"} className={nav}>
                 <FontAwesomeIcon icon={faXmark} className={x_mark}/>
             </Link>
-            <div className={form}>
-                <h1>Załóż konto</h1>
+            <div className={thanks}>
+                <h1>Wylogowano nastąpiło pomyślnie!</h1>
                 <img src={Decoration} alt="Decoration"/>
                 <Link to={"/"}><Button>Strona główna</Button></Link>
             </div>
