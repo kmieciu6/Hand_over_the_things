@@ -10,7 +10,7 @@ import {useState} from "react";
 const Login = () => {
     const {login, nav, nav_form, x_mark, form_label, error, buttons} = styles;
 
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState("email", "");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState({});
 
@@ -42,11 +42,14 @@ const Login = () => {
                 <img src={Decoration} alt="Decoration"/>
                 <form onSubmit={handleSubmit}>
                     <div className={form_label}>
-                        <label>
+                        <label htmlFor="email">
                             <h4>Email</h4>
                             <input type="email" name="email" placeholder="jan.kowalski@xyz.com" value={email}
-                                   onChange={e => setEmail(e.target.value)}/>
+                                   onChange={(e) => setEmail(e.target.value)}
+                            />
                             {errors.email && <p className={error}>{errors.email}</p>}
+                        </label>
+                        <label htmlFor="passowrd">
                             <h4>Hasło</h4>
                             <input type="password" name="password" value={password}
                                    onChange={e => setPassword(e.target.value)}/>

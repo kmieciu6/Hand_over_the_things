@@ -6,32 +6,23 @@ import Button from '../../Button';
 import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowUp} from '@fortawesome/free-solid-svg-icons'
-import {useState, useEffect} from "react";
+import NavLog from "./NavLog"
+
+// import ReactDOM from 'react-dom';
+//
+// import {useState, useEffect} from "react";
+// import LocalStorage from "./LocalStorage";
+// import Login from "../../Login_SignUp/Login";
 
 const Header = () => {
-    const {homeHeader, photo, opening, nav, nav__login, links, title, log, buttons, arrow} = styles;
+    const {homeHeader, photo, opening, nav, links, title, buttons, arrow} = styles;
 
     return (
         <section className={homeHeader} id="home">
             <div className={photo}/>
             <div className={opening}>
                 <div className={nav}>
-                    <div className={nav__login}>
-                        {/*<div className={logOut}>*/}
-                        <Link to={"/Login"} className={log}>
-                            Zaloguj
-                        </Link>
-                        <Link to={"/SignUp"} className={log}>
-                            Załóż konto
-                        </Link>
-                        {/*</div>*/}
-                        {/*<div className={logIn}>*/}
-                            <h2>Login</h2>
-                            <Link to={"/LogOut"} className={log}>
-                                Wyloguj
-                            </Link>
-                        {/*</div>*/}
-                    </div>
+                    <NavLog/>
                     <ul className={links}>
                         <Scroll to={"home"} smooth duration={500}>Start</Scroll>
                         <Scroll to={"simple_steps"} smooth duration={500}>O co chodzi?</Scroll>
