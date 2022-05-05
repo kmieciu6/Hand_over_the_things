@@ -11,8 +11,9 @@
 
   .photo {
     width: 100%;
+    margin-right: -15rem;
     height: auto;
-    background: url("../../../assets/Home-Hero-Image.jpg") right/cover;
+    background: url("../../../assets/Form-Hero-Image.jpg") right/cover;
 
     @include mobile {
       display: none;
@@ -86,30 +87,56 @@
     @include mobile {
       align-items: center;
       margin: 1rem 0;
+
       h1 {
         font-size: 2.2rem;
       }
     }
 
-    .buttons {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
+    h3 {
+      margin-bottom: 4rem;
+      font-size: 2.5rem;
+      font-weight: lighter;
 
-      Button {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    .steps {
+      display: flex;
+
+      @include mobile {
+        flex-direction: column;
       }
 
-        @include mobile {
-        justify-content: center;
+      .square {
+        display: flex;
         align-items: center;
-        flex-direction: column;
+        justify-content: center;
+        border: 1px solid $black-color;
+        width: 150px;
+        height: 150px;
+        transform: rotate(45deg);
+        margin-right: 1rem;
 
-        Button {
-          font-size: 1rem;
-          margin-bottom: 1rem;
-          padding: 1rem;
+        @include mobile {
+          margin: 0 0 1rem 0;
+        }
+
+        .text {
+          transform: rotate(-45deg);
+
+          h4 {
+            margin: 0 0 1rem 0;
+            font-weight: lighter;
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+            font-weight: lighter;
+          }
         }
       }
     }

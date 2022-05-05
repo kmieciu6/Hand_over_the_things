@@ -15,7 +15,7 @@ import NavLog from "./NavLog"
 // import Login from "../../Login_SignUp/Login";
 
 const Header = () => {
-    const {homeHeader, photo, opening, nav, links, title, buttons, arrow} = styles;
+    const {homeHeader, photo, opening, title, buttons, arrow, nav, links} = styles;
 
     return (
         <section className={homeHeader} id="home">
@@ -37,7 +37,7 @@ const Header = () => {
                     <img src={Decoration} alt="Decoration"/>
                     <div className={buttons}>
                         <Link to={"/Login"}><Button>oddaj rzeczy</Button></Link>
-                        <Link to={"/Login"}><Button>zorganizuj zbiórkę</Button></Link>
+                        <Link to={"/Form"}><Button>zorganizuj zbiórkę</Button></Link>
                     </div>
                 </div>
             </div>

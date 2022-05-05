@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from "./header.module.scss"
+import styles from "./navLog.module.scss"
 import {Link} from "react-router-dom";
 
 // Usage
@@ -7,34 +7,29 @@ const NavLog = () => {
     const {nav__login, log} = styles;
 
     // Similar to useState but first arg is key to the value in local storage.
-    const [name, setName] = useLocalStorage("name", "");
-    return (
-        <div>
+    const [email] = useLocalStorage("email", "");
+
+    if (email === {email}) {
+        return (
             <div className={nav__login}>
-                {/*<div className={logOut}>*/}
+                <h2>Cześć {email}</h2>
+                <Link to={"/LogOut"} className={log}>
+                    Wyloguj
+                </Link>
+            </div>
+        )
+    } else {
+        return (
+            <div className={nav__login}>
                 <Link to={"/Login"} className={log}>
                     Zaloguj
                 </Link>
                 <Link to={"/SignUp"} className={log}>
                     Załóż konto
                 </Link>
-                {/*</div>*/}
-                {/*<div className={logIn}>*/}
-                <h2>k</h2>
-                <Link to={"/LogOut"} className={log}>
-                    Wyloguj
-                </Link>
-                {/*</div>*/}
             </div>
-
-            <input
-                type="text"
-                placeholder="Enter your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-        </div>
-    );
+        )
+    }
 }
 
 // Hook
