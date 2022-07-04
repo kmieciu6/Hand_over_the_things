@@ -1,46 +1,19 @@
-@import "settings/reset";
-@import "settings/colors";
-@import "settings/fonts";
-@import "settings/mixins";
+@import 'generic/reset';
 
-body {
-  font-family: $font-base;
-  color: $black-color;
+@import 'settings/colors';
+@import 'settings/fonts';
+@import 'settings/mixins';
 
-  h1 {
-    font-size: 2.4rem;
-    text-align: center;
-  }
+@import 'generic/base';
 
-  h4 {
-    font-size: 1rem;
-    color: $black-color;
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-
-  input, textarea {
-    margin-top: 0.5rem;
-    width: 16rem;
-    background: $white-color;
-    border: 0;
-    border-bottom: 1px solid $grey-color;
-    padding-bottom: 0.2rem;
-    font-family: $font-base;
-  }
-
-  .error {
-    color: red;
-    padding-top: 0.5rem;
-    border-top: 1px solid red;
-    width: 94.2%;
-
-    @include mobile {
-      width: 101.2%;
-    }
-  }
-
-  img {
-    margin: 2rem 0;
-  }
-}
+@import 'components/aboutUs';
+@import 'components/contact';
+@import 'components/header';
+@import 'components/headerForm';
+@import 'components/navLog';
+@import 'components/simpleSteps';
+@import 'components/form';
+@import 'components/threeColumns';
+@import 'components/login-signUp';
+@import 'components/logOut';
+@import 'components/organisation';

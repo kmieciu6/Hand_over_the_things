@@ -1,0 +1,97 @@
+.form {
+  width: 100%;
+  max-width: 1600px;
+
+  h2 {
+    font-size: 2.3rem;
+    color: black;
+  }
+
+  .warning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem;
+    background: $yellow-color;
+    min-height: 25vh;
+
+    @include mobile {
+      text-align: center;
+      align-items: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  h3 {
+    display: block;
+    font-family: $font-base;
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+    margin: 2rem 0;
+  }
+
+
+  p {
+    font-size: 1.4rem;
+  }
+
+
+  .firstForm, .secondForm, .thirdForm, .fourthForm, .resultFirstPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 5rem;
+    width: 100%;
+    background-image: url("../../assets/Background-Form.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    height: 70vh;
+  }
+
+
+  input {
+    //visibility: hidden;
+  }
+
+}
+
+
+.thanks {
+  background: url("../../assets/Background-Form.jpg") center/cover;
+  min-height: 90vh;
+
+  @include mobile {
+    margin-top: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13rem 0 0 5rem;
+    max-width: 50%;
+
+    @include mobile {
+      max-width: 80%;
+      padding-left: 2rem;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    Button {
+      text-transform: unset;
+      font-size: 1.5rem;
+      width: 13rem;
+      height: 4rem;
+    }
+  }
+}

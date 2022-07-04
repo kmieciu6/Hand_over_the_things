@@ -1,0 +1,60 @@
+.login, .sign_up {
+
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+
+    .x_mark {
+      width: 50px;
+      height: 50px;
+      color: $grey-color;
+      transition: 1s;
+      margin: 4rem 5rem;
+
+      @include mobile {
+        margin: 3rem 2rem;
+      }
+
+      &:hover {
+        margin: 3rem 4rem;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .nav_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form_label {
+      background: $white-color;
+      color: $black-color;
+      padding: 5rem;
+
+      @include mobile {
+        padding: 3rem;
+      }
+
+      .error {
+        width: 100%;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      width: 25%;
+
+      Button {
+        padding: 0.5rem;
+        width: 8rem;
+        font-size: 1rem;
+        text-transform: revert;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+#organisation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+
+  .desctription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+  }
+
+  h2 {
+    font-family: $font-base;
+    color: $black-color;
+    font-size: 38px;
+  }
+
+  img {
+    margin: 30px 0;
+  }
+
+  .btns {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+
+    button {
+      font-family: $font-base;
+      font-size: 24px;
+      color: $black-color;
+      background-color: $white-color;
+      border: 1px solid white;
+      margin: 0 25px;
+      height: 100px;
+      width: 200px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+
+  p {
+    width: 50%;
+    font-family: $font-base;
+    color: $black-color;
+    font-size: 22px;
+  }
+
+  .listHelp {
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70%;
+      border-bottom: 2px solid $black-color;
+    }
+
+    .fundation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px 0;
+      width: 50%;
+
+      h3 {
+        font-family: $font-alt;
+        color: $black-color;
+        font-size: 26px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      p {
+        text-align: left;
+        font-family: $font-alt;
+        color: $black-color;
+        font-size: 18px;
+        width: 100%;
+      }
+    }
+
+    p {
+      text-align: end;
+      font-family: $font-alt;
+      color: $black-color;
+      font-size: 18px;
+    }
+  }
+
+  .paginaton {
+    margin: 20px 0;
+
+    button {
+      margin: 0 15px;
+      padding: 15px 10px;
+      background-color: white;
+      font-family: $font-base;
+      font-size: 18px;
+      color: $black-color;
+      border: 1px solid $black-color;
+    }
+
+    button:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+}

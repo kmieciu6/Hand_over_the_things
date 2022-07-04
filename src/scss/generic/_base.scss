@@ -1,0 +1,41 @@
+body {
+  font-family: $font-base;
+  color: $black-color;
+
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: $black-color;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    margin-top: 0.5rem;
+    width: 16rem;
+    background: $white-color;
+    border: 0;
+    border-bottom: 1px solid $grey-color;
+    padding-bottom: 0.2rem;
+    font-family: $font-base;
+  }
+
+  .error {
+    color: red;
+    padding-top: 0.5rem;
+    border-top: 1px solid red;
+    width: 94.2%;
+
+    @include mobile {
+      width: 101.2%;
+    }
+  }
+
+  img {
+    margin: 2rem 0;
+  }
+}

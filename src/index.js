@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './scss/main.scss';
 import App from './App';
-// eslint-disable-next-line no-unused-vars
-import main from './scss/main.scss';
+import { Provider } from 'react-redux';
+import store from './store';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App/>
-        <main/>
+        <Provider store={store}>
+            <HashRouter>
+                <App />
+            </HashRouter>
+        </Provider>
     </React.StrictMode>
 );
