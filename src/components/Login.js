@@ -36,7 +36,7 @@ const Login = ({loginUser}) => {
                 <div className='form_label'>
                     <label htmlFor="" className='label'>
                         <h4>Email</h4>
-                        <input placeholder='jan.kowalski@gmail.pl' type="text" {...register("email", {
+                        <input placeholder='jan.kowalski@xyz.com' type="text" {...register("email", {
                             required: true,
                             minLength: 8
                         })} />

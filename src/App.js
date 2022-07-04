@@ -12,7 +12,6 @@ import {useSelector} from 'react-redux';
 
 const App = () => {
 
-    const {app} = useSelector(state => state);
     const {log} = useSelector(state => state);
     const history = useNavigate()
 
@@ -42,7 +41,7 @@ const App = () => {
                 log[0].email,
                 log[0].password
             );
-            //console.log(userLog);
+            console.log(userLog);
         } catch (error) {
             console.log(error.message);
         }

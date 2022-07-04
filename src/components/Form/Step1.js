@@ -11,8 +11,7 @@ const Step1 = ({setStepNumber}) => {
     const dispatch = useDispatch();
 
     const {
-        handleSubmit,
-        formState: {errors},
+        handleSubmit
     } = useForm();
 
     const onSubmit = () => {

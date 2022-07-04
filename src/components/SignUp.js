@@ -48,7 +48,7 @@ const SignUp = () => {
                 <div className='form_label'>
                     <label>
                         <h4>Email</h4>
-                        <input type="email" placeholder='jan.kowalski@gmail.pl' name="email"
+                        <input type="email" name="email"
                                placeholder="jan.kowalski@xyz.com" value={email}
                                onChange={e => setEmail(e.target.value)}/>
                         {errors.email && <p className='error'>{errors.email}</p>}
