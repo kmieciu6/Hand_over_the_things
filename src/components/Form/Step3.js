@@ -95,11 +95,11 @@ const Step3 = ({setStepNumber}) => {
                 </label>
                 <label htmlFor=""><p>Wpisz nazwę konkretnej orgnizacji</p>
                     <input type="text" onChange={e => setOrganization(e.target.value)}/></label>
-                {isChecked && <p className='war'>Uzupełnij formularz</p>}
                 <div className='buttons'>
                     <Button onClick={() => backStep()}>Wstecz</Button>
                     <Button onClick={() => onSubmit()}>Dalej</Button>
                 </div>
+                {isChecked && <p className='war'>Uzupełnij formularz</p>}
             </div>
         </section>
     );

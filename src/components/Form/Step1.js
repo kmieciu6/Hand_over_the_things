@@ -75,10 +75,10 @@ const Step1 = ({setStepNumber}) => {
                                onChange={e => handleChooseStuff(e.target.value, e.target.checked)}/>
                         <span className="checkmark"></span>
                     </label>
-                    {isChecked && <p className='war'>Zaznacz przynajmniej jedną opcję</p>}
                     <div className='buttons'>
                         <Button type="submit">Dalej</Button>
                     </div>
+                    {isChecked && <p className='war'>Zaznacz przynajmniej jedną opcję</p>}
                 </form>
             </div>
         </section>

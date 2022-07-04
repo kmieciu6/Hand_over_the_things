@@ -24,7 +24,7 @@ const Step2 = ({setStepNumber}) => {
             setIsChecked(false);
             setStepNumber(prev => prev + 1);
         } else {
-             setIsChecked(true);
+            setIsChecked(true);
         }
 
         dispatch(editStuff({quantity: numberBag, stuff: stuff[1].stuff}))
@@ -53,11 +53,11 @@ const Step2 = ({setStepNumber}) => {
                         <option value="5">5</option>
                     </select>
                 </label>
-                {isChecked && <p>Zanzacz przynajmniej jedną opcję</p>}
                 <div className='buttons'>
                     <Button onClick={() => backStep()}>Wstecz</Button>
                     <Button onClick={() => onSubmit()}>Dalej</Button>
                 </div>
+                {isChecked && <p className='war'>Zaznacz przynajmniej jedną opcję</p>}
             </div>
         </section>
     );

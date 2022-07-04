@@ -28,7 +28,7 @@ const App = () => {
                 await signOut(auth);
                 history("/login")
             }
-            //console.log(user);
+            console.log(user);
         } catch (error) {
             console.log(error.message);
         }
