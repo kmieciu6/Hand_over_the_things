@@ -45,8 +45,8 @@ const Summary = ({setStepNumber}) => {
                 </div>
             </div>
             <div className='buttons'>
-                <Button onClick={() => backStep()}>Wstecz</Button>
                 <Button onClick={() => consent()}>Dalej</Button>
+                <Button onClick={() => backStep()}>Wstecz</Button>
             </div>
         </section>
     );

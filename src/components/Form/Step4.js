@@ -94,7 +94,6 @@ const Step4 = ({setStepNumber}) => {
                     <div className='buttons'>
                         <Button onClick={() => backStep()}>Wstecz</Button>
                         <Button onClick={() => onSubmit()}>Dalej</Button>
-                        <Button type="submit">Dalej</Button>
                     </div>
                 </form>
 

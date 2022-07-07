@@ -58,9 +58,9 @@ const Step3 = ({setStepNumber}) => {
             </div>
             <div className='thirdForm'>
                 <p>Krok 3/4</p>
-                <h2>Lokalizacja</h2>
+                <h3>Lokalizacja:</h3>
                 <label htmlFor="">
-                    <select value={location} onChange={handleNumberChange}>
+                    <select className='selectCity' value={location} onChange={handleNumberChange}>
                         <option value="Wybierz">Wybierz</option>
                         <option value="Poznań">Poznań</option>
                         <option value="Kraków">Kraków</option>
@@ -69,7 +69,8 @@ const Step3 = ({setStepNumber}) => {
                         <option value="Gdańsk">Gdańsk</option>
                     </select>
                 </label>
-                <label htmlFor=""><p>Komu chcesz pomóc?</p>
+                <label htmlFor="">
+                    <p>Komu chcesz pomóc?</p>
                     <div className='buttonsWhoHelp'>
                         <div>
                             <button data-check="whoHelp" value="dzieciom"
@@ -96,8 +97,8 @@ const Step3 = ({setStepNumber}) => {
                 <label htmlFor=""><p>Wpisz nazwę konkretnej orgnizacji</p>
                     <input type="text" onChange={e => setOrganization(e.target.value)}/></label>
                 <div className='buttons'>
-                    <Button onClick={() => backStep()}>Wstecz</Button>
                     <Button onClick={() => onSubmit()}>Dalej</Button>
+                    <Button onClick={() => backStep()}>Wstecz</Button>
                 </div>
                 {isChecked && <p className='war'>Uzupełnij formularz</p>}
             </div>

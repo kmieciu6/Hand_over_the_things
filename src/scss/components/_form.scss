@@ -7,6 +7,18 @@
     color: black;
   }
 
+  Button {
+    margin: 2rem;
+    padding: 0.5rem 0;
+    font-size: 1.7rem;
+    background-color: #F0F1F1;
+    text-transform: unset;
+
+    &:hover {
+      background: white;
+    }
+  }
+
   .warning {
     display: flex;
     flex-direction: column;
@@ -36,11 +48,9 @@
     margin: 2rem 0;
   }
 
-
   p {
     font-size: 1.4rem;
   }
-
 
   .firstForm, .secondForm, .thirdForm, .fourthForm, .resultFirstPart {
     display: flex;
@@ -53,24 +63,149 @@
     background-position: 50% 0;
     background-size: cover;
     height: 70vh;
+
+    select {
+      background: rgba(231, 231, 231, 0.93);
+      padding: 0 3rem;
+    }
+
+    .selectBag, .selectCity {
+      font-size: 1.3rem;
+      padding: 0 1.5rem;
+      text-align: center;
+      margin: 0 1rem 2rem 1rem;
+    }
+
+    .buttonsWhoHelp {
+      button {
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        transition: 1s;
+        border: 1px solid black;
+        font-size: 1.2rem;
+
+        &:hover {
+          background: $yellow-color;
+        }
+      }
+
+      .checkedbutton {
+        background-color: $yellow-color;
+      }
+    }
   }
 
+  .thirdForm label {
+    flex-direction: column;
 
-  input {
-    //visibility: hidden;
+    &:last-of-type {
+      margin-top: 2rem;
+      margin-bottom: -4rem;
+    }
   }
+
+  label {
+    display: flex;
+  }
+
+  .thirdForm input, .fourthForm input {
+    border: 1px solid black;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
 
   .war {
-    margin-top: 2rem;
     color: red;
     font-size: large;
   }
 
-  .buttons {
-    margin-top: 5rem;
+  .firstForm {
+    .buttons {
+      margin-top: 8rem;
+    }
+  }
+
+  .secondForm {
+    .buttons {
+      display: flex;
+      margin-top: 17.3rem;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .thirdForm {
+    .buttons {
+      display: flex;
+      margin-top: 4.8rem;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .resultFirstPart {
+    .buttons {
+
+    }
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 28px;
+      width: 28px;
+      border: 1px solid $black-color;
+      background-color: rgba(231, 231, 231, 0.93);
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $grey-color;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    &:hover input ~ .checkmark {
+      background-color: $yellow-color;
+    }
+
+    input:checked ~ .checkmark {
+      background-color: $yellow-color;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
   }
 }
-
 
 .thanks {
   background: url("../../assets/Background-Form.jpg") center/cover;
@@ -98,7 +233,7 @@
 
     Button {
       text-transform: unset;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       width: 13rem;
       height: 4rem;
     }

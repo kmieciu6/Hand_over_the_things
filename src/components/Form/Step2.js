@@ -41,10 +41,10 @@ const Step2 = ({setStepNumber}) => {
             </div>
             <div className='secondForm'>
                 <p>Krok 2/4</p>
-                <h2>Podaj w ile worków chcesz się spakować:</h2>
+                <h3>Podaj w ile worków chcesz się spakować:</h3>
                 <label htmlFor="">
                     <p>Liczba 60l worków: </p>
-                    <select value={numberBag} onChange={handleNumberChange}>
+                    <select className='selectBag' value={numberBag} onChange={handleNumberChange}>
                         <option value="Wybierz">Wybierz</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -54,8 +54,8 @@ const Step2 = ({setStepNumber}) => {
                     </select>
                 </label>
                 <div className='buttons'>
-                    <Button onClick={() => backStep()}>Wstecz</Button>
                     <Button onClick={() => onSubmit()}>Dalej</Button>
+                    <Button onClick={() => backStep()}>Wstecz</Button>
                 </div>
                 {isChecked && <p className='war'>Zaznacz przynajmniej jedną opcję</p>}
             </div>

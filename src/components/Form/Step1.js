@@ -45,35 +45,35 @@ const Step1 = ({setStepNumber}) => {
                 <p>Krok 1/4</p>
                 <h3>Zaznacz co chcesz oddać:</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <label htmlFor="">
-                        <p>Ubrania, które nadają się do ponownego użycia</p>
+                    <label className="container">
                         <input className='input' type="checkbox" value="Ubrania, które nadają się do ponownego użycia"
                                onChange={e => handleChooseStuff(e.target.value, e.target.checked)}/>
-                        <span className="checkmark"></span>
+                        <span className="checkmark"/>
+                        <p>Ubrania, które nadają się do ponownego użycia </p>
                     </label>
-                    <label htmlFor="">
-                        <p>Ubrania, do wyrzucenia</p>
+                    <label className="container">
                         <input type="checkbox" value="Ubrania, do wyrzucenia"
                                onChange={e => handleChooseStuff(e.target.value, e.target.checked)}/>
-                        <span className="checkmark"></span>
+                        <span className="checkmark"/>
+                        <p>Ubrania, do wyrzucenia </p>
                     </label>
-                    <label htmlFor="">
-                        <p>zabawki</p>
+                    <label className="container">
                         <input type="checkbox" value="zabawki"
                                onChange={e => handleChooseStuff(e.target.value, e.target.checked)}/>
-                        <span className="checkmark"></span>
+                        <span className="checkmark"/>
+                        <p>Zabawki </p>
                     </label>
-                    <label htmlFor="">
-                        <p>ksiażki</p>
+                    <label className="container">
                         <input type="checkbox" value="ksiażki"
                                onChange={e => handleChooseStuff(e.target.value, e.target.checked)}/>
-                        <span className="checkmark"></span>
+                        <span className="checkmark"/>
+                        <p>Książki </p>
                     </label>
-                    <label htmlFor="">
-                        <p>inne</p>
+                    <label className="container">
                         <input type="checkbox" value="inne"
                                onChange={e => handleChooseStuff(e.target.value, e.target.checked)}/>
-                        <span className="checkmark"></span>
+                        <span className="checkmark"/>
+                        <p>Inne </p>
                     </label>
                     <div className='buttons'>
                         <Button type="submit">Dalej</Button>
