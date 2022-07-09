@@ -8,9 +8,9 @@ const Thanks = () => {
     return (
         <section className='thanks'>
             <div>
-                <p>Dziękujemy za przesłanie formularza.
+                <h2>Dziękujemy za przesłanie formularza.
                     <br/> Na maila prześlemy wszelkie
-                    <br/> informacje o odbiorze</p>
+                    <br/> informacje o odbiorze</h2>
                 <img src={Decoration} alt="Decoration"/>
                 <Link to={"/"}><Button>Strona główna</Button></Link>
             </div>

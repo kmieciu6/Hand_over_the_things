@@ -19,34 +19,34 @@ const Summary = ({setStepNumber}) => {
 
     return (
         <section className='form'>
-            <div className='result'>
-                <div className='resultFirstPart'>
+            <div className='summary'>
+                <div className='result'>
                     <h2>Podsumowanie twojej darowizny</h2>
                     <div>
-                        <h4>Odajesz:</h4>
-                        <p><img src={tshirt} alt=""/> {stuff.quantity} worki,{stuff.stuff}, {stuff.people}</p>
+                        <h3>Oddajesz:</h3>
+                        <p><img src={tshirt} alt=""/> {stuff.quantity} worki, {stuff.stuff}, {stuff.people}</p>
                         <p><img src={location} alt=""/> dla lokacji {stuff.location}, {stuff.organization}</p>
                     </div>
                 </div>
                 <div className='resultData'>
                     <div>
-                        <h4>Adress Odbioru</h4>
+                        <h3>Adres Odbioru</h3>
                         <p>Ulica: {stuff.adress[0]}</p>
                         <p>Miasto: {stuff.adress[1]}</p>
                         <p>Kod pocztowy: {stuff.adress[2]}</p>
                         <p>Numer Telefonu: {stuff.adress[3]}</p>
                     </div>
                     <div>
-                        <h4>Termin Odbioru</h4>
+                        <h3>Termin Odbioru</h3>
                         <p>Data: {stuff.time[0]}</p>
                         <p>Godzina: {stuff.time[1]}</p>
                         <p>Uwagi dla kuriera: <br/> {stuff.time[2]}</p>
                     </div>
                 </div>
-            </div>
-            <div className='buttons'>
-                <Button onClick={() => consent()}>Dalej</Button>
-                <Button onClick={() => backStep()}>Wstecz</Button>
+                <div className='buttons'>
+                    <Button onClick={() => consent()}>Potwierdzam</Button>
+                    <Button onClick={() => backStep()}>Wstecz</Button>
+                </div>
             </div>
         </section>
     );

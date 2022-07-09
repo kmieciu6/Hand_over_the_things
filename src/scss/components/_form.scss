@@ -1,6 +1,5 @@
 .form {
   width: 100%;
-  max-width: 1600px;
 
   h2 {
     font-size: 2.3rem;
@@ -8,7 +7,7 @@
   }
 
   Button {
-    margin: 2rem;
+    margin: 1rem;
     padding: 0.5rem 0;
     font-size: 1.7rem;
     background-color: #F0F1F1;
@@ -42,27 +41,27 @@
   h3 {
     display: block;
     font-family: $font-base;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     color: black;
     margin: 2rem 0;
+
+    @include mobile {
+      font-size: 25px;
+    }
   }
 
   p {
     font-size: 1.4rem;
   }
 
-  .firstForm, .secondForm, .thirdForm, .fourthForm, .resultFirstPart {
+  .firstForm, .secondForm, .thirdForm, .fourthForm, .summary {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem 5rem;
-    width: 100%;
-    background-image: url("../../assets/Background-Form.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    height: 70vh;
+    background: url("../../assets/Background-Form.jpg") left/cover;
+    min-height: 70vh;
 
     select {
       background: rgba(231, 231, 231, 0.93);
@@ -114,15 +113,28 @@
     margin-top: 1rem;
   }
 
-
   .war {
     color: red;
     font-size: large;
+    margin-top: -1.2rem;
+    margin-bottom: 1.5rem;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
   }
 
   .firstForm {
     .buttons {
+      display: flex;
       margin-top: 8rem;
+
+      @include mobile {
+        margin-top: 3rem;
+        justify-content: center;
+      }
     }
   }
 
@@ -131,6 +143,12 @@
       display: flex;
       margin-top: 17.3rem;
       flex-direction: row-reverse;
+
+      @include mobile {
+        margin-top: 12rem;
+        flex-direction: column;
+        align-self: center;
+      }
     }
   }
 
@@ -139,12 +157,128 @@
       display: flex;
       margin-top: 4.8rem;
       flex-direction: row-reverse;
+
+      @include mobile {
+        margin-top: 5rem;
+        flex-direction: column;
+        align-self: center;
+      }
     }
   }
 
-  .resultFirstPart {
-    .buttons {
+  .fourthForm {
 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .formInput {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+      }
+
+      label {
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        margin: 0 0 1.5rem .1rem;
+
+        input {
+          margin: 0 0 0 2rem;
+          padding: .2rem 0;
+        }
+
+        textarea {
+          padding: 0;
+          border: 1px solid black;
+          margin: 0;
+        }
+      }
+
+      div:last-child {
+
+        @include desktop {
+          margin-left: 3rem;
+        }
+
+        label:last-child p {
+          width: 30%;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      margin-top: 4.8rem;
+      flex-direction: row-reverse;
+      justify-content: start;
+
+      @include mobile {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  .summary {
+    display: flex;
+
+    @include mobile {
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      padding: 0.5rem;
+    }
+
+    img {
+      margin: 0;
+      width: 3rem;
+    }
+
+    .resultData {
+      display: flex;
+      width: 100%;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        margin-top: 0.5rem;
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row-reverse;
+
+      @include mobile {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-self: center;
+
+      }
     }
   }
 
@@ -205,37 +339,42 @@
       display: block;
     }
   }
+
 }
 
 .thanks {
-  background: url("../../assets/Background-Form.jpg") center/cover;
-  min-height: 90vh;
+  background: url("../../assets/Background-Form.jpg") left/cover;
+  min-height: 70vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
   @include mobile {
-    margin-top: 2rem;
+    justify-content: center;
   }
 
-  form {
+  div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 13rem 0 0 5rem;
-    max-width: 50%;
+    width: 60%;
 
-    @include mobile {
-      max-width: 80%;
-      padding-left: 2rem;
-
-      h1 {
-        font-size: 1.8rem;
-      }
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
 
-    Button {
-      text-transform: unset;
-      font-size: 1.3rem;
-      width: 13rem;
-      height: 4rem;
+    img {
+      height: auto;
     }
+  }
+
+  Button {
+    text-transform: unset;
+    font-size: 1.3rem;
+    width: 13rem;
+    height: 4rem;
+
   }
 }
