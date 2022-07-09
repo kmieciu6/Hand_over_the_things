@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     collection,
     getDocs
 } from "firebase/firestore";
-import { db } from '../firebase-config';
+import {db} from '../firebase-config';
 import Pagination from "./Pagination";
 
 const LocalCollection = () => {
@@ -16,7 +16,7 @@ const LocalCollection = () => {
     useEffect(() => {
         const getFundation = async () => {
             const data = await getDocs(localCollectionRef);
-            setlocalCollection(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            setlocalCollection(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         };
         getFundation();
     });
@@ -43,7 +43,8 @@ const LocalCollection = () => {
                     </li>
                 })}
             </ul>
-            <Pagination postPerPage={postPerPage} totalPosts={localCollection.length} paginationFundation={paginationFundation} />
+            <Pagination postPerPage={postPerPage} totalPosts={localCollection.length}
+                        paginationFundation={paginationFundation}/>
         </div>
     );
 }

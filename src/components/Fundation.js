@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     collection,
     getDocs
 } from "firebase/firestore";
-import { db } from '../firebase-config';
+import {db} from '../firebase-config';
 import Pagination from "./Pagination";
 
 const Fundation = () => {
@@ -16,7 +16,7 @@ const Fundation = () => {
     useEffect(() => {
         const getFundation = async () => {
             const data = await getDocs(fundationsCollectionRef);
-            setFundation(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            setFundation(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         };
         getFundation();
     });
@@ -45,7 +45,8 @@ const Fundation = () => {
                     </li>
                 })}
             </ul>
-            <Pagination postPerPage={postPerPage} totalPosts={fundation.length} paginationFundation={paginationFundation} />
+            <Pagination postPerPage={postPerPage} totalPosts={fundation.length}
+                        paginationFundation={paginationFundation}/>
         </div>
     );
 }
