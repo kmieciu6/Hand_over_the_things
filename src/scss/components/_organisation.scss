@@ -106,12 +106,12 @@
   .paginaton {
     margin: 20px 0;
     display: flex;
-    justify-items: center;
+    justify-content: center;
 
     button {
       margin: 0 15px;
       padding: 15px 10px;
-      background-color: black;
+      background-color: white;
       font-family: $font-base;
       font-size: 18px;
       color: $black-color;
